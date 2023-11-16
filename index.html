@@ -9,13 +9,13 @@
     <h1>Rowanda Regional Medical Center</h1>
     <p>See console...</p>
     <script>
-        // Destructuring assignment with objects
         let patient = {name: 'Jordan Fisherman', birthday: 'April 7, 1994', age: 29, allergies: ['gluten', 'penicillin'], diagnosis: 'Type 2 Diabetes', insurance: 'none', medicineLogs: [
             {medicine_name: 'Prednisone', dose: '20mg', time: '9pm'},
             {medicine_name: 'Loratadine', dose: '10mg', time: '9pm'},
             {medicine_name: 'Omeprazole', dose: '40mg', time: '10pm'}
         ]};
 
+        // Destructuring assignment with objects
         let {name, birthday, allergies, diagnosis} = patient;
 
         console.log(name, birthday, allergies); // prints 'Jordan Fisher', 'April 7, 1994', ['gluten', 'penicillin']
