@@ -15,15 +15,24 @@
             {medicine_name: 'Omeprazole', dose: '40mg', time: '10pm'}
         ]};
 
-        // Destructuring assignment with objects
-        let {name, birthday, allergies, diagnosis} = patient;
+        // // Destructuring assignment with objects
+        // let {name, birthday, allergies, diagnosis} = patient;
 
-        console.log(name, birthday, allergies); // prints 'Jordan Fisher', 'April 7, 1994', ['gluten', 'penicillin']
+        // console.log(name, birthday, allergies); // prints 'Jordan Fisher', 'April 7, 1994', ['gluten', 'penicillin']
 
         // Destructuring assignment with arrays
         let [first, second, third] = patient.medicineLogs; // gives each object set to var name
 
         console.log(first, second, third); // prints each medicine log object
+
+        // Destructuring from return values of functions
+        function patientIntake(name, birthday, allergies, insurance) {
+            return {name: name, birthday: birthday, allergies: allergies, insurance: insurance}; // destructured values from return object from invoking function
+        }
+
+        let { name, birthday, allergies, insurance } = patientIntake('Miranda Lynn', 'August 14, 1967', 'none', 'Employer Insurance');
+
+        console.log(name, birthday, allergies, insurance); // prints 'Miranda Lynn' 'August 4, 1967' 'none' 'Employer Insurance'
     </script>
 </body>
 </html>
