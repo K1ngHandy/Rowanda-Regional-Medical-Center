@@ -33,6 +33,19 @@
         let { name, birthday, allergies, insurance } = patientIntake('Miranda Lynn', 'August 14, 1967', 'none', 'Employer Insurance');
 
         console.log(name, birthday, allergies, insurance); // prints 'Miranda Lynn' 'August 4, 1967' 'none' 'Employer Insurance'
+
+        // Creating shallow copies of arrays and objects
+        let medications = [escitalopram, loratadine, gabapentin, melatonin];
+
+        function addMedication(arr) {
+            const treatments = [amoxicillin, omeprazole, ibuprofen, tylenol];
+            let medsCopy = [...arr]; // copy all elements to new array
+            medsCopy.push(treatments[1]);
+            return medsCopy;
+        }
+
+        console.log(addMedication(medications)); // prints [escitalopram, loratadine, gabapentin, melatonin, amoxicillin]
+        console.log(medications); // prints [escitalopram, loratadine, gabapentin, melatonin]
     </script>
 </body>
 </html>
